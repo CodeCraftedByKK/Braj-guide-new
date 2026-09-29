@@ -1,17 +1,112 @@
+:root {
+  --sandstone: #F1E4D0;
+  --maroon: #7A2E2E;
+  --marigold: #D98E28;
+  --ink: #2B2320;
+  --cream: #FBF7EF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fdf6ec;
-  color: #333;
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.5;
 }
 
-header {
-  background-color: #b03a2e;
-  color: white;
-  padding: 20px;
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e3d6bf;
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.3rem;
+  color: var(--maroon);
+}
+
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+nav a:hover { color: var(--marigold); }
+
+.lang-toggle {
+  border: 1px solid var(--maroon);
+  background: none;
+  color: var(--maroon);
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.hero {
+  background: var(--sandstone);
+  padding: 90px 40px;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  color: var(--maroon);
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  max-width: 60ch;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--marigold);
+  color: var(--cream);
+  padding: 12px 26px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.highlights {
+  display: flex;
+  gap: 40px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.highlight { max-width: 260px; }
+
+.highlight h3 {
+  color: var(--maroon);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.highlight p { font-size: 0.95rem; }
+
+.site-footer {
   text-align: center;
+  padding: 30px;
+  color: #8a7c6a;
+  font-size: 0.85rem;
 }
 
-main {
-  padding: 20px;
+@media (max-width: 600px) {
+  .site-header { flex-direction: column; gap: 12px; }
+  .hero { padding: 60px 20px; }
+  .hero h1 { font-size: 2rem; }
 }
